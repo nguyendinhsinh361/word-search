@@ -60,7 +60,9 @@ for (const word of listWordInput) {
 // Hàm kiểm tra xem một path có xuất hiện trong một đối tượng khác không
 function pathAppearsInOtherObjects(path, otherObjects) {
     for (const otherPath of otherObjects.path) {
-        if (JSON.stringify(path).includes(JSON.stringify(otherPath))) {
+        const originPath = path.map(subArray => subArray.map(pair => pair.join("")).join("-")).join("-");
+        const reversePath = originPath.split('').reverse().join('')
+        if ((originPath.concat('-', reversePath)).includes(otherPath.join(''))) {
             return true;
         }
     }

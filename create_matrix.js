@@ -187,7 +187,7 @@ function createHiraganaAndKatakanaMatrix(matrixSize, words) {
 }
 
 // Ví dụ tạo ma trận 5x5 từ bảng kí tự katakana chứa các từ "ヘビ" và "キツネ"
-const n = 8;
+const n = 3;
 const words = ["ヘビ", "キツネ", "ヒョウ"];
 const katakanaMatrix = createHiraganaAndKatakanaMatrix(n, words);
 
