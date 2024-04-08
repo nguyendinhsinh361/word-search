@@ -118,7 +118,7 @@ function isWordPlaced(matrix, word, row, col, dx, dy) {
 }
 
 // Tạo ma trận chứa từ có vị trí ngẫu nhiên
-function createKatakanaMatrix(matrixSize, words) {
+function createHiraganaAndKatakanaMatrix(matrixSize, words) {
     const keys = Object.keys(jpDictionary);
     const matrix = [];
 
@@ -189,7 +189,7 @@ function createKatakanaMatrix(matrixSize, words) {
 // Ví dụ tạo ma trận 5x5 từ bảng kí tự katakana chứa các từ "ヘビ" và "キツネ"
 const n = 8;
 const words = ["ヘビ", "キツネ", "ヒョウ"];
-const katakanaMatrix = createKatakanaMatrix(n, words);
+const katakanaMatrix = createHiraganaAndKatakanaMatrix(n, words);
 
 // In ra ma trận katakana chứa các từ "ヘビ" và "キツネ"
 console.log(katakanaMatrix)
